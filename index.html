@@ -1,117 +1,323 @@
 <!DOCTYPE html>
 <html lang="ur" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>جامعہ خلفائے راشدین رضی اللہ عنہم</title>
-  <style>
-    * { box-sizing: border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جامعہ خلفائے راشدین رضی اللہ عنہم</title>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7f2;
-      color: #183c2b;
-      text-align: center;
-      line-height: 1.9;
-    }
+<style>
+* { box-sizing: border-box; }
 
-    header {
-      background: #145638;
-      color: white;
-      padding: 28px 15px;
-    }
+html { scroll-behavior: smooth; }
 
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7f2;
+  color: #183c2b;
+  text-align: center;
+  line-height: 2;
+}
 
-    nav {
-      background: #0d3f29;
-      padding: 12px;
-    }
+header {
+  background: #145638;
+  color: white;
+  padding: 30px 15px;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-    }
+.logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  background: white;
+  border-radius: 10px;
+}
 
-    main { padding: 25px 15px; }
+header h1 {
+  font-size: 30px;
+  margin: 15px 0;
+}
 
-    .card {
-      background: white;
-      max-width: 650px;
-      margin: 18px auto;
-      padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 3px 12px #00000012;
-    }
+nav {
+  background: #0d3f29;
+  padding: 14px 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-    h2 { color: #167047; }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
 
-    .contact {
-      display: inline-block;
-      background: #167047;
-      color: white;
-      padding: 10px 22px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
+nav a:hover { color: #f5d778; }
 
-    footer {
-      background: #0d3f29;
-      color: white;
-      padding: 15px;
-      margin-top: 25px;
-    }
+main {
+  padding: 20px 12px;
+  max-width: 950px;
+  margin: auto;
+}
 
-    @media (max-width: 480px) {
-      header h1 { font-size: 25px; }
-      nav a { margin: 0 6px; }
-    }
-  </style>
+.card {
+  background: white;
+  margin: 22px 0;
+  padding: 25px 20px;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px #00000010;
+  scroll-margin-top: 85px;
+}
+
+h2 { color: #176747; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.item {
+  background: #f5f8f3;
+  border-radius: 12px;
+  padding: 14px;
+  overflow-wrap: anywhere;
+}
+
+.gallery img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.button {
+  display: inline-block;
+  background: #176747;
+  color: white;
+  padding: 9px 18px;
+  margin: 5px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.button:hover { background: #0d3f29; }
+
+ul {
+  display: inline-block;
+  text-align: right;
+  margin: 0 auto;
+}
+
+footer {
+  background: #0d3f29;
+  color: white;
+  padding: 22px 12px;
+  margin-top: 25px;
+}
+
+@media (max-width: 480px) {
+  header h1 { font-size: 24px; }
+  .grid { grid-template-columns: 1fr; }
+  .card { padding: 20px 14px; }
+  .gallery img { height: 200px; }
+}
+</style>
 </head>
 
 <body>
-  <header>
-  <img src="105881-removebg-preview.png" alt="جامعہ کا لوگو" style="width:120px;height:auto;display:block;margin:0 auto 15px;">
+
+<header>
+  <img class="logo"
+       src="FB_IMG_1791564374616.jpg"
+       alt="جامعہ کا لوگو">
+
   <h1>جامعہ خلفائے راشدین رضی اللہ عنہم</h1>
   <p>قرآن و سنت کی تعلیم کا مرکز</p>
-  </header>
+  <p>علم، عمل اور اخلاق کی روشنی</p>
+</header>
 
-  <nav>
-    <a href="#intro">تعارف</a>
-    <a href="#education">تعلیم</a>
-    <a href="#contact">رابطہ</a>
-  </nav>
+<nav>
+  <a href="#intro">تعارف</a>
+  <a href="#gallery">گیلری</a>
+  <a href="#teachers">اساتذہ</a>
+  <a href="#admission">داخلہ</a>
+  <a href="#quran">قرآن و حدیث</a>
+  <a href="#results">نتائج</a>
+  <a href="#contact">رابطہ</a>
+</nav>
 
-  <main>
-    <section class="card" id="intro">
-      <h2>خوش آمدید</h2>
-      <p>
-        جامعہ خلفائے راشدین رضی اللہ عنہم کی ویب سائٹ پر
-        آپ کو خوش آمدید کہتے ہیں۔
-      </p>
-      <p>
-        ہمارا مقصد قرآن کریم اور دینی علوم کی تعلیم کو فروغ دینا ہے۔
-      </p>
-    </section>
+<main>
 
-    <section class="card" id="education">
-      <h2>ہمارے شعبہ جات</h2>
-      <p>قرآن کریم، ناظرہ، حفظ اور دینی تعلیم۔</p>
-    </section>
+<section class="card" id="intro">
+  <h2>خوش آمدید</h2>
+  <p>
+    جامعہ خلفائے راشدین رضی اللہ عنہم کی ویب سائٹ پر
+    آپ کو خوش آمدید کہتے ہیں۔
+  </p>
+  <p>
+    ہمارا مقصد قرآن کریم اور دینی علوم کی تعلیم کو
+    فروغ دینا اور طلبہ کی علمی و اخلاقی تربیت کرنا ہے۔
+  </p>
+</section>
 
-    <section class="card" id="contact">
-      <h2>رابطہ کریں</h2>
-      <p>مدرسے کا رابطہ نمبر اور پتہ یہاں شامل کیا جائے گا۔</p>
-    </section>
-  </main>
+<section class="card" id="gallery">
+  <h2>تصاویر کی گیلری</h2>
+  <p>جامعہ اور تعلیمی سرگرمیوں کی جھلکیاں</p>
 
-  <footer>
-    <p>جامعہ خلفائے راشدین رضی اللہ عنہم © 2026</p>
-  </footer>
+  <div class="grid gallery">
+    <div class="item">
+      <img src="masjid.jpg" alt="جامعہ کی عمارت">
+      <p>جامعہ کی عمارت</p>
+    </div>
+
+    <div class="item">
+      <img src="class.jpg" alt="تعلیمی سرگرمیاں">
+      <p>تعلیمی سرگرمیاں</p>
+    </div>
+
+    <div class="item">
+      <img src="program.jpg" alt="جامعہ کا پروگرام">
+      <p>جامعہ کے پروگرام</p>
+    </div>
+
+    <div class="item">
+      <img src="students.jpg" alt="طلبہ کی سرگرمیاں">
+      <p>طلبہ کی سرگرمیاں</p>
+    </div>
+  </div>
+</section>
+
+<section class="card" id="teachers">
+  <h2>ہمارے اساتذہ</h2>
+  <div class="grid">
+
+    <div class="item">
+      <h3>استاد محترم 1</h3>
+      <p>یہاں استاد کا اصل نام لکھیں۔</p>
+      <p>مضمون: قرآن کریم</p>
+    </div>
+
+    <div class="item">
+      <h3>استاد محترم 2</h3>
+      <p>یہاں استاد کا اصل نام لکھیں۔</p>
+      <p>مضمون: حدیث شریف</p>
+    </div>
+
+    <div class="item">
+      <h3>استاد محترم 3</h3>
+      <p>یہاں استاد کا اصل نام لکھیں۔</p>
+      <p>مضمون: فقہ و دینی علوم</p>
+    </div>
+
+    <div class="item">
+      <h3>استاد محترم 4</h3>
+      <p>یہاں استاد کا اصل نام لکھیں۔</p>
+      <p>مضمون: عربی زبان</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="card" id="admission">
+  <h2>داخلے کی معلومات</h2>
+  <p>داخلے سے متعلق تفصیلات کے لیے جامعہ سے رابطہ کریں۔</p>
+
+  <ul>
+    <li>داخلے کی تاریخ: یہاں درج کریں۔</li>
+    <li>عمر کی شرط: انتظامیہ سے معلوم کریں۔</li>
+    <li>ضروری دستاویزات: یہاں درج کریں۔</li>
+    <li>داخلے کے لیے رابطہ: نیچے دی گئی معلومات دیکھیں۔</li>
+  </ul>
+
+  <p>
+    داخلے کی حتمی شرائط اور تاریخیں جامعہ کی انتظامیہ
+    کی تصدیق کے بعد درج کریں۔
+  </p>
+</section>
+
+<section class="card" id="quran">
+  <h2>قرآن و حدیث</h2>
+
+  <div class="grid">
+    <div class="item">
+      <h3>قرآن کریم</h3>
+      <p>قرآن کریم کی تلاوت، حفظ اور تجوید کی تعلیم۔</p>
+    </div>
+
+    <div class="item">
+      <h3>حدیث شریف</h3>
+      <p>احادیث نبویہ کی تعلیم اور ان سے رہنمائی۔</p>
+    </div>
+
+    <div class="item">
+      <h3>دینی علوم</h3>
+      <p>فقہ، عقائد اور اسلامی آداب کی تعلیم۔</p>
+    </div>
+
+    <div class="item">
+      <h3>اخلاق و تربیت</h3>
+      <p>طلبہ کی علمی، عملی اور اخلاقی تربیت۔</p>
+    </div>
+  </div>
+</section>
+
+<section class="card" id="results">
+  <h2>طلبہ کے نتائج</h2>
+  <p>
+    طلبہ کی تعلیمی کارکردگی اور امتحانی نتائج
+    یہاں شائع کیے جا سکتے ہیں۔
+  </p>
+
+  <div class="item">
+    <h3>سالانہ امتحانات</h3>
+    <p>تعلیمی سال: یہاں درج کریں۔</p>
+    <p>نتائج: انتظامیہ کی تصدیق کے بعد شامل کریں۔</p>
+    <p>
+      طلبہ کے نتائج شائع کرنے سے پہلے اجازت لیں
+      اور غیر ضروری ذاتی معلومات شامل نہ کریں۔
+    </p>
+  </div>
+</section>
+
+<section class="card" id="contact">
+  <h2>رابطہ اور پتہ</h2>
+
+  <p><strong>ادارے کا نام:</strong>
+    جامعہ خلفائے راشدین رضی اللہ عنہم
+  </p>
+
+  <p><strong>پتہ:</strong>
+    یہاں جامعہ کا مکمل پتہ درج کریں۔
+  </p>
+
+  <p><strong>فون نمبر:</strong>
+    یہاں جامعہ کا درست رابطہ نمبر درج کریں۔
+  </p>
+
+  <a class="button"
+     href="https://www.google.com/maps/search/?api=1&query=Jamia+Khulafa+Rashideen"
+     target="_blank" rel="noopener">
+    گوگل میپس پر تلاش کریں
+  </a>
+
+  <p>
+    درست نقشے کے لیے بٹن کے لنک میں جامعہ کا مکمل پتہ
+    یا گوگل میپس کا تصدیق شدہ مقام استعمال کریں۔
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <p>جامعہ خلفائے راشدین رضی اللہ عنہم</p>
+  <p>قرآن و سنت کی تعلیم کا مرکز</p>
+  <p>© جامعہ کے جملہ حقوق محفوظ ہیں۔</p>
+</footer>
+
 </body>
 </html>
